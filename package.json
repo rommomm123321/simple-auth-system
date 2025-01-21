@@ -1,0 +1,36 @@
+{
+	"name": "athleticacrm",
+	"version": "1.0.0",
+	"main": "main.js",
+	"type": "module",
+	"scripts": {
+		"start": "node main.js",
+		"dev": "nodemon main.js",
+		"migrate": "npx sequelize-cli --config ./config/sequelize.config.cjs db:migrate",
+		"migrate:undo": "npx sequelize-cli --config ./config/sequelize.config.cjs db:migrate:undo",
+		"migrate:undo:all": "npx sequelize-cli --config ./config/sequelize.config.cjs db:migrate:undo:all",
+		"migration:generate": "npx sequelize-cli --config ./config/sequelize.config.cjs migration:generate --name"
+	},
+	"dependencies": {
+		"bcrypt": "^5.1.1",
+		"bull": "^4.16.5",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.7",
+		"esm": "^3.2.25",
+		"express": "^4.21.2",
+		"joi": "^17.13.3",
+		"jsonwebtoken": "^9.0.2",
+		"nodemailer": "^6.9.16",
+		"pg": "^8.13.1",
+		"pg-hstore": "^2.3.4",
+		"redis": "^4.7.0",
+		"sequelize": "^6.37.5"
+	},
+	"devDependencies": {
+		"@types/bcrypt": "^5.0.2",
+		"@types/express": "^5.0.0",
+		"@types/jsonwebtoken": "^9.0.7",
+		"nodemon": "^2.0.22",
+		"sequelize-cli": "^6.6.2"
+	}
+}
